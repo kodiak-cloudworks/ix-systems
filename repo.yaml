@@ -1,24 +1,5 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Gist
- @kodiak-som
- Sign out
- Unwatch 4
-  Star 0
- Fork 0 kodiak-cloudworks/clickhouse
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Settings Insights 
-Branch: cloudworks Find file Copy pathclickhouse/repo.yaml
-d73e4ca  2 days ago
-@kodiak-som kodiak-som Update repo.yaml
-1 contributor
-RawBlameHistory     
-116 lines (82 sloc)  2.77 KB
 version:      0.5.2
-updated:    7.26.2017
+updated:    6.29.2017
 
 # Memcloud services 
 cloud-services  : 
@@ -26,7 +7,10 @@ cloud-services  :
   - hdfs    : [standard]
   - impala  : [standard]
   
-
+  replicator-etl:
+  - tungsten-preconfigured :  [mysql-mysql, mysql-hadoop, mysql-clickhouse, kafka-hdfs]
+  - tungsten-custom :     [configurable] 
+  
   big-data.Hortonworks:  
   - HDP-Hortonworks : [ hdp-standard ]
    
@@ -42,10 +26,28 @@ cloud-services  :
   - elasticsearch  : [ standard ] 
   - logstash        : [ data-only ]
   - elasticsearch-logstash-kibana : [standard ]
+  
+  
+  big-data-multi-stack :
+  - Apache-SMACK  : [standard]
+  - elasticsearch-logstash-kibana   :  [standard]
 
-
-
-
+  cloud :        
+  - DCOS            : [ enterprise-edition, community-edition ] 
+  - Docker-swarm    : [ swarm-cluster ]
+  - host-cluster   : [ generic-cluster ]
+  - Kubernetes      : [ miniKube, standard, extended ]
+  - Redhat-Openshift : [ standard, mini]
+  - bunch-of-nodes : [ default, multinode ]
+       
+  storage:
+  - ceph  :   [ production-ceph-core]
+  - gluster : [standalone, gluster-docker-swarm-bootstrap ]
+  - jbod  :   [standard]
+  - vNAS  :   [standard, hybrid]
+  - gpfs  :   [standard ]
+  - lustre  :   [standard ]
+  - minio : [standard ]
    
 # StorageCloud services may be similar or different
 storage-services :
@@ -66,7 +68,9 @@ storage-services :
   - Memcache  : [ standard-fixed, autoscaling ]
   - Couchbase : [ standard ]
   
-
+  data-lakes: 
+  - hdfs-single-tenant-data-lake  : [ all-flash, hybrid, tiered ] 
+  - hdfs-multi-tenant-data-lake   : [ all-flash, hybrid, tiered ] 
   
   
 
@@ -120,9 +124,14 @@ testdrives:
 demos: 
   databases:
   - clickhouse: [nyc-taxi-rides-dataset, top-2000-dataset, ontime-arrival-dataset]
+  - kx :        [nyc-taxi-rides]
   
   storage:
-  - kodiak-lightning-proxy:  [standard, +tiering ] 
+  - menlostor : [standard]
+  - lamdafire-proxy:  [standard, +tiering ] 
+  
+  replicator-etl:
+  - tungsten :  [mysql-mysql, mysql-hadoop, mysql-clickhouse, kafka-hdfs]
   
 benchmarks: 
   databases:
@@ -132,5 +141,3 @@ benchmarks:
  ## -- end of repo.yaml
   
   
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
