@@ -1,54 +1,7 @@
 version:      0.5.2
 updated:    6.29.2017
 
-# Memcloud services 
-cloud-services  : 
-  big-data.Cloudera:  
-  - hdfs    : [standard]
-  - impala  : [standard]
-  
-  replicator-etl:
-  - tungsten-preconfigured :  [mysql-mysql, mysql-hadoop, mysql-clickhouse, kafka-hdfs]
-  - tungsten-custom :     [configurable] 
-  
-  big-data.Hortonworks:  
-  - HDP-Hortonworks : [ hdp-standard ]
-   
-  big-data.MapR:  
-  - MapR-community-edition : [ standard ]
-  
-  big-data.Apache :
-  - Apache-SMACK  : [ standard, extended ]
-  - hdfs-big-data : [ data-only, +spark, +druid ]
-  - kafka         : [ standard ]
-  
-  big-data-elk :
-  - elasticsearch  : [ standard ] 
-  - logstash        : [ data-only ]
-  - elasticsearch-logstash-kibana : [standard ]
-  
-  
-  big-data-multi-stack :
-  - Apache-SMACK  : [standard]
-  - elasticsearch-logstash-kibana   :  [standard]
-
-  cloud :        
-  - DCOS            : [ enterprise-edition, community-edition ] 
-  - Docker-swarm    : [ swarm-cluster ]
-  - host-cluster   : [ generic-cluster ]
-  - Kubernetes      : [ miniKube, standard, extended ]
-  - Redhat-Openshift : [ standard, mini]
-  - bunch-of-nodes : [ default, multinode ]
-       
-  storage:
-  - ceph  :   [ production-ceph-core]
-  - gluster : [standalone, gluster-docker-swarm-bootstrap ]
-  - jbod  :   [standard]
-  - vNAS  :   [standard, hybrid]
-  - gpfs  :   [standard ]
-  - lustre  :   [standard ]
-  - minio : [standard ]
-   
+# Memcloud services  
 # StorageCloud services may be similar or different
 storage-services :
   storage:
