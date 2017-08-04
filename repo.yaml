@@ -1,0 +1,136 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Gist
+ @kodiak-som
+ Sign out
+ Unwatch 4
+  Star 0
+ Fork 0 kodiak-cloudworks/clickhouse
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Settings Insights 
+Branch: cloudworks Find file Copy pathclickhouse/repo.yaml
+d73e4ca  2 days ago
+@kodiak-som kodiak-som Update repo.yaml
+1 contributor
+RawBlameHistory     
+116 lines (82 sloc)  2.77 KB
+version:      0.5.2
+updated:    7.26.2017
+
+# Memcloud services 
+cloud-services  : 
+  big-data.Cloudera:  
+  - hdfs    : [standard]
+  - impala  : [standard]
+  
+
+  big-data.Hortonworks:  
+  - HDP-Hortonworks : [ hdp-standard ]
+   
+  big-data.MapR:  
+  - MapR-community-edition : [ standard ]
+  
+  big-data.Apache :
+  - Apache-SMACK  : [ standard, extended ]
+  - hdfs-big-data : [ data-only, +spark, +druid ]
+  - kafka         : [ standard ]
+  
+  big-data-elk :
+  - elasticsearch  : [ standard ] 
+  - logstash        : [ data-only ]
+  - elasticsearch-logstash-kibana : [standard ]
+
+
+
+
+   
+# StorageCloud services may be similar or different
+storage-services :
+  storage:
+  - jbod  :   [standard]
+  - vNAS  :   [standard, hybrid]
+  
+  clusters:
+  - ceph  :   [rht-test-drive, rht-certification, production-ceph-core]
+  - gluster : [standalone, gluster-docker-swarm-bootstrap ]
+  - gpfs  :   [standard ]
+  - lustre  :   [standard ] 
+  
+  key-value-stores: 
+  - Redis     : [ standard, cluster ]
+  - Cassandra : [ standard-3-node ]
+  - Riak      : [ standard ]
+  - Memcache  : [ standard-fixed, autoscaling ]
+  - Couchbase : [ standard ]
+  
+
+  
+  
+
+# Database services may be similar or different
+database-services :
+  sql-databases:
+  - Oracle    : [standard, RAC ]
+  - SQL-server-2017-linux : [ standard ]
+  - MySQL                 : [ default-single-node, 3-node-cluster ]
+  - Postgress             : [ single-node ]
+  - MariaDB         : [ default-engine, +columnstore ]
+  - Memsql          : [ default ]
+ 
+  mpp-columnar-databases:
+  - MariaDB         : [ +columnstore ]
+  - Clickhouse      : [ test-drive, standard ]
+  - Vertica         : [ test-drive, standard ]
+
+  nosql-databases:
+  - MongoDB               : [ standard ]
+  - Cassandra             : [ multi-node]
+
+  analytics:
+  - Druid   : [standard]
+  - Drill   : [standard]
+  - Impala  : [standard]
+  - Spark   : [standard]
+  
+  
+misc:
+  multi-stack-projects :
+  - SMACK  : [standard]
+  - ELK   :  [standard]
+ 
+# Placeholder for private repo 
+myrepo :
+  my-multi-stack-services :
+  - login-to-view  : [user-services-list]
+  my-private-services :
+  - login-to-view  : [user-services-list]
+
+testdrives:
+  storage:
+  - ceph :            [ rht-standard, rht-extended-testdrive ]
+  - hdfs-tiering:     [ standard ]
+  - lamdafire-proxy:  [standard, +tiering ]
+  
+  databases: 
+  - clickhouse :      [ standard-clickhouse-testdrive, large-clickhouse-testdrive, custom-clickhouse-testdrive ]
+  
+demos: 
+  databases:
+  - clickhouse: [nyc-taxi-rides-dataset, top-2000-dataset, ontime-arrival-dataset]
+  
+  storage:
+  - kodiak-lightning-proxy:  [standard, +tiering ] 
+  
+benchmarks: 
+  databases:
+  - clickhouse: [standard, large, custom]
+
+  
+ ## -- end of repo.yaml
+  
+  
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
