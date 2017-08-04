@@ -1,2 +1,4 @@
-# ix-systems
-Cloudworks partnership repository for iX Systems
+# clickhouse-demohub
+Demo hub for Kodiak/Altinity Clickhouse projects
+
+Published at http://clickdemo.memcloud.works/
