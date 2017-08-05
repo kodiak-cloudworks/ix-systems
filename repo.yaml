@@ -57,13 +57,6 @@ misc:
   multi-stack-projects :
   - SMACK  : [standard]
   - ELK   :  [standard]
- 
-# Placeholder for private repo 
-myrepo :
-  my-multi-stack-services :
-  - login-to-view  : [user-services-list]
-  my-private-services :
-  - login-to-view  : [user-services-list]
 
 testdrives:
   storage:
