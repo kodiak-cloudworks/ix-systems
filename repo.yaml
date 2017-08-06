@@ -79,7 +79,12 @@ demos:
   replicator-etl:
   - tungsten :  [mysql-mysql, mysql-hadoop, mysql-clickhouse, kafka-hdfs]
   
+#sandboxes: 
+#
+
+#
 #benchmarks: 
+#
 #  databases:
 #  - clickhouse: [standard, large, custom]
 
