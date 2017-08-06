@@ -58,15 +58,16 @@ misc:
   - SMACK  : [standard]
   - ELK   :  [standard]
 
-testdrives:
-  storage:
-  - ceph :            [ rht-standard, rht-extended-testdrive ]
-  - hdfs-tiering:     [ standard ]
-  - lamdafire-proxy:  [standard, +tiering ]
-  
-  databases: 
-  - clickhouse :      [ standard-clickhouse-testdrive, large-clickhouse-testdrive, custom-clickhouse-testdrive ]
-  
+#
+#testdrives:
+#  storage:
+# - ceph :            [ rht-standard, rht-extended-testdrive ]
+#  - hdfs-tiering:     [ standard ]
+#  - lamdafire-proxy:  [standard, +tiering ]
+#  
+#  databases: 
+#  - clickhouse :      [ standard-clickhouse-testdrive, large-clickhouse-testdrive, custom-clickhouse-testdrive ]
+#  
 demos: 
   databases:
   - clickhouse: [nyc-taxi-rides-dataset, top-2000-dataset, ontime-arrival-dataset]
