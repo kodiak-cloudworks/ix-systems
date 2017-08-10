@@ -71,14 +71,12 @@ misc:
 demos: 
   databases:
   - clickhouse: [nyc-taxi-rides-dataset, top-2000-dataset, ontime-arrival-dataset]
-  - kx :        [nyc-taxi-rides]
   
   storage:
-  - menlostor : [standard]
-  - lamdafire-proxy:  [standard, +tiering ] 
+  - freenas : [standard]
+  - kodiak-lightning:  [standard +ceph] 
+  - ceph: [ object-api-certification ]
   
-  replicator-etl:
-  - tungsten :  [mysql-mysql, mysql-hadoop, mysql-clickhouse, kafka-hdfs]
   
 #sandboxes: 
 #
