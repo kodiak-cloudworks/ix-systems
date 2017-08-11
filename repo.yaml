@@ -68,13 +68,10 @@ misc:
 #  databases: 
 #  - clickhouse :      [ standard-clickhouse-testdrive, large-clickhouse-testdrive, custom-clickhouse-testdrive ]
 #  
-demos: 
-  databases:
-  - clickhouse: [nyc-taxi-rides-dataset, top-2000-dataset, ontime-arrival-dataset]
-  
+demos:   
   storage:
   - freenas : [standard]
-  - kodiak-lightning:  [standard +ceph] 
+  - kodiak-lightning-Transparent-Object-Proxy:  [standard +ceph] 
   - ceph: [ object-api-certification ]
   
   
