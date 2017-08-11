@@ -71,8 +71,8 @@ misc:
 demos:   
   storage:
   - freenas : [standard]
-  - kodiak-lightning-Transparent-Object-Proxy:  [standard +ceph] 
-  - ceph: [ object-api-certification ]
+#  - kodiak-lightning-Transparent-Object-Proxy:  [standard +ceph] 
+#  - ceph: [ object-api-certification ]
   
   
 #sandboxes: 
