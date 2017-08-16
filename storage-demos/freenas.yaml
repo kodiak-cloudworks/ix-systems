@@ -1,0 +1,19 @@
+#
+# Contains the key for the JSON demo accounts array to pick up which demo containers to run
+# 'demokey' is used to pick up demo datacontainers from the appkeys.json file for specific project ID
+#
+#   Module: freenas.yaml
+#
+#   Applies to both memcloud and storagecloud
+#
+#
+#
+version:    0.1
+updated:    8.15.2017
+contact:    som@kodiakdata.com
+
+standard:
+  demokey:    cloudworks-ix-freenas
+#
+# 
+# end of freenas.yaml
