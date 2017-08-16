@@ -69,7 +69,7 @@ misc:
 #  - clickhouse :      [ standard-clickhouse-testdrive, large-clickhouse-testdrive, custom-clickhouse-testdrive ]
 #  
 demos:   
-  storage:
+  storage-demos:
   - freenas : [standard]
 #  - kodiak-lightning-Transparent-Object-Proxy:  [standard +ceph] 
 #  - ceph: [ object-api-certification ]
